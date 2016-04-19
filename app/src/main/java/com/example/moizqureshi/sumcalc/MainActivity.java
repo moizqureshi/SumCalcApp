@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 num1 = Double.parseDouble((numberOne.getText().toString()));
                 num2 = Double.parseDouble(numberTwo.getText().toString());
-                sum = num1 + num2;
+                sum = sumNums(num1, num2);
                 result.setText("Sum = " + Double.toString(sum));
             }
         });
@@ -72,6 +72,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public double sumNums(double a, double b){
+        return a + b;
     }
 
 
